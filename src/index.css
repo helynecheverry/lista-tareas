@@ -1,0 +1,139 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+  color: #18181b;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 3rem 1rem;
+}
+
+/* Tarjeta contenedora principal */
+#root > div {
+  width: 100%;
+  max-width: 480px;
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+}
+
+h1 {
+  text-align: center;
+  margin: 0 0 1.5rem;
+  font-size: 1.8rem;
+  color: #4338ca;
+}
+
+/* Formulario */
+form {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 0.7rem 0.9rem;
+  font-size: 1rem;
+  border: 2px solid #e4e4e7;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+input[type="text"]:focus {
+  border-color: #6366f1;
+}
+
+/* Botones */
+button {
+  padding: 0.7rem 1.1rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  background-color: #6366f1;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.1s, background-color 0.2s;
+}
+
+button:hover {
+  background-color: #4f46e5;
+  transform: translateY(-1px);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+/* Lista de tareas */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fafafa;
+  padding: 0.85rem 1rem;
+  margin-bottom: 0.6rem;
+  border-radius: 10px;
+  border: 1px solid #f0f0f0;
+  transition: box-shadow 0.2s, transform 0.1s;
+}
+
+li:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transform: translateX(2px);
+}
+
+/* El label agrupa checkbox y texto */
+li label {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  cursor: pointer;
+  flex: 1;
+}
+
+/* Checkbox con el color de la marca */
+li input[type="checkbox"] {
+  width: 1.15rem;
+  height: 1.15rem;
+  cursor: pointer;
+  accent-color: #6366f1;
+}
+
+li span {
+  font-size: 1rem;
+  color: #27272a;
+}
+
+/* Boton Borrar en rojo */
+li button {
+  background-color: #ef4444;
+  padding: 0.45rem 0.8rem;
+  font-size: 0.85rem;
+}
+
+li button:hover {
+  background-color: #dc2626;
+}
+
+/* Mensaje de lista vacia */
+p {
+  text-align: center;
+  color: #a1a1aa;
+  font-style: italic;
+}
